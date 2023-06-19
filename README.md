@@ -17,8 +17,8 @@ the KMCL implementations which augments the base ASL loss function.
 For the multi-label case (sigmoids), the implementation is : 
 - ```class KMCL_Loss(nn.Module)```
 
-This class leverages three seperate loss formulations:
-- ```ASL``
+This class leverages three separate loss formulations:
+- ```ASL``'
 - ```Reconstruction Loss```
 - ```KMCL Loss```
 The losses and generic class take keyword arguments to specify the loss case (either "isotropic" or "anisotropic") as well as the distance measure (Battacharya, Mahalonbis, RBF).
