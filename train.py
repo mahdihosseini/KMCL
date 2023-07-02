@@ -32,17 +32,18 @@ from ptflops import get_model_complexity_info
 torch.multiprocessing.set_sharing_strategy('file_system')
 
 
-parser = argparse.ArgumentParser(description='PyTorch MS_COCO Training')
-parser.add_argument('--data_folder', help='path to dataset', default='/fs2/comm/kpgrp/mhosseini/project_MCL/')
+parser = argparse.ArgumentParser(description='PyTorch Training')
+parser.add_argument('--data_folder', help='path to dataset', default='', required=True)
 parser.add_argument('--lr', default=2e-4, type=float)
 parser.add_argument('--model-name', default='tresnet_m')
 parser.add_argument('--model-path', 
-                    default='/fs2/comm/kpgrp/mhosseini/github/KMCL/networks/models/tresnet_m_miil_21k.pth',
-                    type=str)
-parser.add_argument('--num-classes', default=80)
+                    default='',
+                    type=str,
+                    required=True)
+parser.add_argument('--num-classes', default=20)
 parser.add_argument('--epochs', default=40)
 parser.add_argument('--dataset', 
-                    choices=["PascalVOC", "COCO", "ADP", "Xray", "COCOSub"], default="COCOSub")
+                    choices=["PascalVOC", "COCO", "ADP", "Xray", "COCOSub"], default="PascalVOC")
 parser.add_argument('-j', '--workers', default=1, type=int, metavar='N',
                     help='number of data loading workers (default: 16)')
 parser.add_argument('--image-size', default=224, type=int,

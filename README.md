@@ -17,13 +17,16 @@ the KMCL implementations which augments the base ASL loss function.
 For the multi-label case (sigmoids), the implementation is : 
 - ```class KMCL_Loss(nn.Module)```
 
-This class leverages three separate loss formulations:
-- ```ASL``'
+This class leverages three seperate loss formulations:
+- ```ASL``
 - ```Reconstruction Loss```
 - ```KMCL Loss```
 The losses and generic class take keyword arguments to specify the loss case (either "isotropic" or "anisotropic") as well as the distance measure (Battacharya, Mahalonbis, RBF).
 
 
 Running either [train.py](\train.py) or [train_dist.py](\train_dist.py) will execute the end-to-end contrastive learning for the dataset of interest. The latter runs the script under a fully distributed framework enabling our method to scale easily to larger image resolutions, architectures, and batch size configurations.
+
+## Pretrained Models & Results
+In this [link](./MODELS.md), we provide our pre-trained models and results on several datasets accross both the TResNet-M and TResNet-L architectures.
 
 This project source code is based on https://github.com/Alibaba-MIIL/ASL.
