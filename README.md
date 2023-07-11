@@ -2,7 +2,7 @@
 
 > A. Sajedi*, S. Khaki*, K. N. Plataniotis, M. S. Hosseini, 'End-to-End Supervised Multilabel Contrastive Learning,' in review.  
 >  *: equal contribution  
-> arXiv preprint from [here](https://arxiv.org/abs/2301.01286)
+> arXiv preprint from [here](https://arxiv.org/abs/2307.03967)
 
 **Abstract**
 
